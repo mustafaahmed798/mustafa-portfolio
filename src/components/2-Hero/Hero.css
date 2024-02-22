@@ -1,0 +1,131 @@
+/* ==========================
+   Hero section
+=============================
+
+/* parent edit*/
+section.hero {
+  margin-top: 3rem;
+}
+
+/* photo and icon*/
+section.hero .parent-avatar {
+  align-items: end !important;
+  gap: 0.4rem;
+}
+section.hero .person {
+  width: 4rem;
+  height: 4rem;
+  color: var(--title);
+  padding: 0.3rem 1rem;
+}
+section.hero .person .me {
+  width: 3.7rem;
+  height: 3.7rem;
+  margin-left: -0.95rem;
+  margin-top: -0.18rem;
+  inset: 0;
+}
+section.hero .avatar {
+  font-size: 2.8rem;
+  color: var(--title);
+  text-decoration: underline rgba(255, 170, 0, 0.658);
+}
+section.hero .me:hover {
+  scale: 1.1;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+section.hero .icon-verified {
+  color: var(--blue);
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+/* position of items*/
+section.hero .left-section {
+  flex-grow: 1;
+}
+
+section.hero .left-section .title {
+  font-size: 2.5rem;
+  line-height: 3.3rem;
+  margin: 24px 0;
+  color: var(--title);
+}
+
+section.hero .left-section .sub-title {
+  color: var(--subtitle);
+  font-size: 1rem;
+  line-height: 1.65rem;
+  margin-bottom: 20px;
+}
+
+section.hero .left-section .resume {
+  background-color: var(--btnbgcolor);
+  color: var(--title);
+  text-align: center;
+  height: 2.5rem;
+  width: 11rem;
+  padding: 0.15rem 0;
+  font-size: 1.05rem;
+  border-radius: 0.9rem;
+  border: 1px solid var(--blue);
+  opacity: 0.9;
+  transition: 0.3s;
+  margin-bottom: 1.1rem;
+  margin-top: 0;
+}
+section.hero .left-section .resume.active {
+  opacity: 1;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  padding: 0.18rem 0;
+  border: 1px solid var(--blue);
+}
+
+section.hero .left-section .resume:hover {
+  opacity: 1;
+  background-color: var(--btnhover);
+  border: 1px solid var(--blue);
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+section.hero .left-section .icons {
+  gap: 1rem;
+}
+
+section.hero .left-section .icon {
+  color: var(--subtitle) !important;
+  font-size: 1.4rem;
+}
+
+section.hero .left-section .icon:hover {
+  color: var(--title) !important;
+  cursor: pointer;
+  scale: 1.2;
+  transition: 0.3s;
+}
+
+@media (max-width: 770px) {
+  section.hero .right-section {
+    display: none;
+  }
+  section.hero .left-section .title {
+    font-size: 2rem;
+  }
+  section.hero .avatar {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  section.hero .left-section .title {
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  section.hero .avatar {
+    font-size: 2.2rem;
+  }
+}

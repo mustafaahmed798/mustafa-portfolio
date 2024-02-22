@@ -1,0 +1,132 @@
+/*--------------------------
+    Content of main.css
+----------------------------
+1.Main container
+2.left section - Buttons
+3right section - cards
+*/
+/*---------------------------
+    1.Main
+---------------------------*/
+main.main {
+  gap: 2.6rem;
+  align-items: start !important;
+}
+
+/*---------------------------
+    2.left section - Buttons
+--------------------------*/
+main section.left-section {
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+main section.left-section button {
+  background-color: var(--btnbgcolor);
+  color: var(--title);
+  text-align: center;
+  height: 2.5rem;
+  width: 10rem;
+  padding: 0.15rem 0;
+  font-size: 1.05rem;
+  border-radius: 0.6rem;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+main section.left-section button.active {
+  opacity: 1;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  padding: 0.18rem 0;
+  border: 1px solid var(--blue);
+}
+
+main section.left-section button:hover {
+  opacity: 1;
+  background-color: var(--btnhover);
+  border: 1px solid var(--blue);
+  transition: 0.3s;
+}
+
+/*---------------------------
+    3right section - cards
+---------------------------*/
+main section.right-section {
+  flex-grow: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+main section.right-section .card {
+  background-color: var(--cardcolor);
+  border: 1px solid var(--cardborder);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+main section.right-section .card:hover {
+  border: 1px solid var(--blue);
+  rotate: 2deg;
+  transition: 0.4s;
+  scale: 1.025;
+  cursor: pointer;
+}
+
+main section.right-section .card .box {
+  padding: 1rem 0.4rem;
+}
+main section.right-section .card .box .title {
+  color: var(--title);
+  font-size: 1.4rem;
+}
+main section.right-section .card .box .sub-title {
+  color: var(--subtitle);
+  font-size: 0.8rem;
+  margin-top: 0.7rem;
+  padding-left: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+main section.right-section .card .icons {
+  color: var(--subtitle);
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 0 0.4rem;
+}
+
+main section.right-section .card a .icon-link {
+  color: var(--subtitle);
+}
+main section.right-section .card a .icon-github {
+  color: var(--subtitle);
+}
+main section.right-section .card .icon-github:hover,
+main section.right-section .card .icon-link:hover {
+  color: var(--title);
+  scale: 1.2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+main section.right-section .card .link {
+  color: var(--blue) !important;
+  gap: 0.2rem;
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  main.main {
+    flex-direction: column;
+    gap: 2.65;
+    align-items: center;
+  }
+}
+
+@media (max-width: 860px) {
+  main section.left-section {
+    flex-direction: row;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

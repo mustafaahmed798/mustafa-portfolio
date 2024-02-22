@@ -1,0 +1,173 @@
+:root {
+  --primary: #000000;
+  --cover: #161211e7;
+  --secondary: rgb(24, 24, 27);
+  --border: rgba(63, 63, 70, 0.4);
+  --title: rgb(244 244 245);
+  --subtitle: rgb(161 161 170);
+  --bgheader: rgb(39, 39, 42);
+  --blue: rgb(93, 188, 252);
+  --btnhover: rgb(47, 48, 59);
+  --btnbgcolor: rgb(36, 37, 46, 1);
+
+  --cardcolor: rgba(32, 33, 39, 0.829);
+  --cardborder: rgb(93, 188, 252, 0.3);
+
+  --focus: rgb(45, 212, 191);
+  --inputcolor: rgb(63, 63, 70, 0.15);
+  --inputborder: rgb(63, 63, 70);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Robot", sans-serif;
+  letter-spacing: 0.2px;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.light {
+  background-color: #e7e7e7;
+  --primary: rgb(228, 228, 228);
+  --cover: #fde3dde7;
+  --secondary: rgba(226, 226, 241, 0.842);
+  --border: rgba(168, 166, 166, 0.52);
+  --title: rgb(0, 0, 0);
+  --subtitle: rgb(70, 70, 70);
+  --bgheader: rgb(231, 231, 231);
+  --blue: rgb(10, 32, 46);
+
+  --btnhover: rgba(136, 135, 135, 0.938);
+  --btnbgcolor: rgba(65, 60, 60, 0.349);
+
+  --cardcolor: rgba(48, 42, 42, 0.26);
+  --cardborder: rgb(93, 188, 252, 0.3);
+
+  --focus: rgb(1, 119, 101);
+  --inputcolor: rgba(169, 169, 170, 0.342);
+  --inputborder: rgb(199, 199, 199);
+}
+.dark {
+  background-color: #000;
+}
+
+.container {
+  border: 2px solid var(--border);
+  width: 80% !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem !important;
+  background-color: var(--secondary);
+  box-shadow: 0px 2px 2px 1px var(--cardcolor);
+}
+
+.divider {
+  border: 1px solid var(--border);
+  margin: 1.5rem 0;
+  width: calc(100% + 1.5rem + 1.5rem);
+  margin-left: -1.5rem !important;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: initial !important;
+  transition: 0.2s;
+}
+
+.flex {
+  display: flex;
+  align-items: center !important;
+}
+
+.border {
+  border: 2px solid red !important;
+}
+
+button {
+  all: unset;
+}
+
+button:hover {
+  cursor: pointer;
+}
+button:active {
+  scale: 0.9;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/*Scroling*/
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid rgb(118, 118, 128);
+  box-shadow: inset 0 0 2.5px rgb(116, 116, 126) !important;
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(111, 111, 119);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(88, 91, 94);
+}
+
+.scrolltop {
+  background-color: rgba(25, 118, 210, 0.637);
+  color: rgba(241, 243, 245, 0.85);
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 3%;
+  text-align: center;
+  border: 1px solid #ffffff38;
+  transition: 0.3s;
+}
+.scrolltop:hover {
+  background-color: rgba(25, 118, 210);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 0 1.5rem !important;
+  }
+  .scrolltop {
+    opacity: 0.4;
+    height: 1.8rem;
+    width: 1.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 90%;
+    padding: 0 1.5rem !important;
+  }
+
+  .divider {
+    width: calc(100% + 1.5rem + 1.5rem);
+    margin-left: -1.5rem !important;
+  }
+}

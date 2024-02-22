@@ -1,0 +1,63 @@
+main {
+  display: grid;
+}
+main h1 {
+  font-size: 1.5rem;
+  color: var(--title);
+  gap: 0.8rem;
+}
+main .dev {
+  rotate: 180deg;
+  opacity: 0.8;
+  color: var(--blue);
+}
+main .card {
+  margin-top: 1rem;
+  width: 240px;
+  background-color: var(--cardcolor);
+  border: 1px solid var(--cardborder);
+  transition: 0.3s;
+  border-radius: 5px;
+  align-items: center;
+}
+main .card:hover {
+  rotate: 2deg;
+  transition: 0.4s;
+  box-shadow: 0px 3px 3px 3px var(--cardborder);
+  border: 1px solid var(--blue) !important;
+  scale: 1.025;
+  cursor: pointer;
+  img {
+    scale: 0.9;
+    transition: 0.4s;
+  }
+}
+
+main .card img {
+  width: 90%;
+}
+main .title {
+  color: var(--title);
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+main .lang {
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    gap: 2.65;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  main h1 {
+    font-size: 0.94rem;
+  }
+}
